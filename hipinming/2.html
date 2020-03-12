@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1"><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+</title><link href="/css/index.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+        div.m-page {
+            float:right;
+        }
+        .m-page a {
+            margin-left:8px;
+        }
+        .ml4 {
+            margin-left:4px;
+        }
+    </style>
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <script src="/js/slider.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            $("#choice1 li").click(function () {
+                $(this).addClass("z-crt").siblings(this).removeClass("z-crt");
+                $("#hidCity").val($(this).attr("value"));
+                $("#btnQuery").click();
+            });
+
+            $("#choice2 li").click(function () {
+                $(this).addClass("z-crt").siblings(this).removeClass("z-crt");
+                $("#hidJobType").val($(this).attr("value"));
+                $("#btnQuery").click();
+            });
+
+            //$(".m-table tbody tr:eq(0)").click(function () {
+            //    window.location.href = "/2/2.1.1.aspx"
+            //});
+
+            $("#choice1 li:first").addClass("z-crt");
+            $("#choice2 li:first").addClass("z-crt");
+        });
+
+        function GoDetails(id) {
+            window.location.href = "/2/2.1.1.aspx?id=" + id;
+
+        }
+    </script>
+</head>
+<body>
+    <form method="post" action="./2.1.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=pynGkmcFUV13He1Qd6_TZHatyQ-yzBz4T7Mrs2uNXGqN8Z57pi25r7wf2m8Re3KiO_BJNdMmrqb9mWpnSdEFtQ2&amp;t=636655177334043214" type="text/javascript"></script>
+
+
+<script src="/ScriptResource.axd?d=9yI70IQfdNWWOGHK2vEJ354QXD9-Kjd_Vx0--lGzCyl9BpinEAIfsNR9tV5ryGUgnYiQ06rtHTtKXMU-bfWxxpwe3qGMQcxuFvRAEP4C2RN4eIUGwUUoRPrUNdbSUCWmB7gkXvrrSxiF_p3JUek9FV1hfsw3iC4AMUkWSzWiw8w1&amp;t=ffffffffcc58dd65" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax 客户端框架未能加载。');
+//]]>
+</script>
+
+<script src="/ScriptResource.axd?d=McM9khqfd8P8zkBy4_CKwm2v6jqvVY37-id789OymhcA5igDPXsIvTdecmM6yO54s1NVh-aYOHNjdvUWvs90GZGrEjHDfOTo9jMQ_SEHNB0T5z5AnYFmuB3sKsOm3JOn14OGzC8mpVTWCgGWokLOC58J9J2B6JaarVTHb5r3VgvLV0EmSmElQuEoRVEQp5Mt0&amp;t=ffffffffcc58dd65" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="CF373D37" />
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="eq0ZQByw3IOxiUvglZ2aHyhLIdBlE83eiRZRX2TPlNQWtwCsSzcU892wtymPDWIvq7MVfqnJEoz115aLEqnvK1nxDFa6XNFxjRnaEGXDg24ZOnSDrds5HMnptqgTiFZyRXlfAk/kecOt2xxFp1EvVLLJuC6Q2d6o67jiV9Nz66zPohprJFKbDqMB6qyuv+iaRGCNqRuKOPp/WGutm/+JQg==" />
+</div>
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ScriptManager1', 'form1', ['tUpdatePanel1','UpdatePanel1','tUpdatePanel3','UpdatePanel3','tUpdatePanel2','UpdatePanel2'], [], [], 90, '');
+//]]>
+</script>
+
+        <input name="hidCity" type="hidden" id="hidCity" value="C117F977-DC8F-49A6-B88A-4830F7E49BAC" />
+        <input name="hidJobType" type="hidden" id="hidJobType" value="DB1845DC-E3EE-4559-A35F-E92E6EBA5E4D" />
+        <div class="top-bg">
+            <div class="middle-box">
+            </div>
+        </div>
+        <div class="nav-bg">
+            <div class="middle-box">
+                <img class="header-logo" src="/images/pmlogs.jpg">
+                <div class="header-campus">
+                    <p class="two">2018</p>
+                    <p class="f-fs14">品茗校园招聘</p>
+                </div>
+                <ul class="nav-top">
+                    <li><a href="/Index.aspx">首页</a></li>
+                    <li><a class="active" href="/2/2.1.aspx">校园招聘</a></li>
+                    <li><a href="/3/3.1.aspx">走进品茗</a></li>
+                    <li><a href="/4/4.1.aspx">员工分享</a></li>
+                    <li><a href="/5/5.1.aspx">乐在品茗</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="content-bg">
+            <div class="middle-box">
+                <div class="nav-left">
+                    <ul>
+                        <li><a class="active" href="/2/2.1.aspx">招聘职位</a></li>
+                        <li><a href="/2/2.2.aspx">招聘流程</a></li>
+                        <li><a href="/2/2.4.aspx">宣讲行程</a></li>
+                        <li><a href="/2/2.3.aspx">常见问题</a></li>
+                    </ul>
+                    <div class="weixin">
+                        <img src="/images/1wm.png" width="89" height="89">
+                        <div>微品茗</div>
+                    </div>
+                    <div class="weixin">
+                        <img src="/images/2wm.jpg" width="89" height="89">
+                        <div>品茗股份</div>
+                    </div>
+                    <div class="weixin">
+                        <img src="/images/3wm.jpg" width="89" height="89">
+                        <div>品茗造价</div>
+                    </div>
+                    <div class="weixin">
+                        <img src="/images/4wm.jpg" width="89" height="89">
+                        <div>品茗施工</div>
+                    </div>
+                    <div class="weixin">
+                        <img src="/images/5wm.jpg" width="89" height="89">
+                        <div>品茗智慧工地</div>
+                    </div>
+                </div>
+                <div class="right-box">
+                    <div class="tag-box">
+                        <span class="tag-cn">招聘职位</span>
+                        <span class="tag-en">Recruitment Post</span>
+                    </div>
+                    <div class="u-notices">
+                        <i class="u-icon-notices"></i>
+                        <span>网申截止：2017年11月2日-2018年3月20日</span>
+                    </div>
+                    <div class="m-choice">
+                        <div class="choice_list">
+                            <label class="label">工作地点:</label>
+                            <ul id="choice1" class="itms">
+
+
+                                        <li class="" value='C117F977-DC8F-49A6-B88A-4830F7E49BAC'><a>全部</a></li>
+
+                                        <li class="" value='66E9E9A1-83D9-4999-B078-A6435B55E854'><a>浙江</a></li>
+
+                                        <li class="" value='38AABB3A-66B4-4723-910A-DE4095FDCD32'><a>杭州</a></li>
+
+                                        <li class="" value='76E9E9A1-83D9-4999-B078-A6435B55E854'><a>北京</a></li>
+
+                                        <li class="" value='86E9E9A1-83D9-4999-B078-A6435B55E854'><a>天津</a></li>
+
+                                        <li class="" value='73175E85-7D5A-47C1-B672-0739B335FCC6'><a>湖北</a></li>
+
+                                        <li class="" value='79F12CF4-63D0-477E-95DF-74CE7B7691FB'><a>安徽</a></li>
+
+                                        <li class="" value='7F089ECE-20CC-40DE-AB29-EE70274FFDF1'><a>河南</a></li>
+
+                                        <li class="" value='56E9E9A1-83D9-4999-B078-A6435B55E854'><a>云南</a></li>
+
+                                        <li class="" value='86E9E9A2-83D9-4999-B078-A6435B55E854'><a>湖南</a></li>
+
+                                        <li class="" value='86E9E9A3-83D9-4999-B078-A6435B55E854'><a>四川</a></li>
+
+                                        <li class="" value='86E9E9A4-83D9-4999-B078-A6435B55E854'><a>重庆</a></li>
+
+                                        <li class="" value='86E9E9A5-83D9-4999-B078-A6435B55E854'><a>河北</a></li>
+
+                                        <li class="" value='86E9E9A6-83D9-4999-B078-A6435B55E854'><a>山东</a></li>
+
+                                        <li class="" value='86E9E9A7-83D9-4999-B078-A6435B55E854'><a>辽宁</a></li>
+
+                                        <li class="" value='86E9E9A8-83D9-4999-B078-A6435B55E854'><a>广西</a></li>
+
+                                        <li class="" value='86E9E9A9-83D9-4999-B078-A6435B55E854'><a>广东</a></li>
+
+                                        <li class="" value='86E9E9A9-83D9-4999-B178-A6435B55E854'><a>福建</a></li>
+
+                                        <li class="" value='86E9E9A9-83D9-4999-B278-A6435B55E854'><a>上海</a></li>
+
+                                        <li class="" value='86E9E9A9-83D9-4999-B378-A6435B55E854'><a>山西</a></li>
+
+                                        <li class="" value='86E9E9A9-83D9-4999-B478-A6435B55E854'><a>陕西</a></li>
+
+                                        <li class="" value='86E9E9A9-83D9-4999-B578-A6435B55E854'><a>江西</a></li>
+
+                            </ul>
+                            <div class="cb"></div>
+                        </div>
+                        <div class="choice_list">
+                            <label class="label">职位类别:</label>
+                            <ul id="choice2" class="itms">
+
+
+                                        <li class="" value='DB1845DC-E3EE-4559-A35F-E92E6EBA5E4D'><a>全部</a></li>
+
+                                        <li class="" value='F6CE071D-FC23-4582-B756-38348506F834'><a>研发类</a></li>
+
+                                        <li class="" value='FA7BF9B5-34A7-405F-8EBE-9ACED6553CCC'><a>产品类</a></li>
+
+                                        <li class="" value='C063B1EE-81F8-42FA-913A-7DF4B9B30E23'><a>市场类</a></li>
+
+                                        <li class="" value='C063B1EE-81F8-42FA-913A-7DF4B9B30E24'><a>职能类</a></li>
+
+                            </ul>
+                            <div class="cb"></div>
+                        </div>
+                    </div>
+                    <div id="UpdatePanel1">
+
+                            <table class="m-table">
+                                <thead>
+                                    <tr>
+                                        <th width="256" class="col5">职位名称</th>
+                                        <th width="227" class="col4">职位类别</th>
+                                        <th width="226" class="col4">工作地点</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                            <tr onclick="GoDetails('dca52134-827a-4adf-8d8c-1648adf3cc33');">
+                                                <td class="f-ellipsis">产品助理</td>
+                                                <td>产品类</td>
+                                                <td class="f-ellipsis">全部</td>
+                                            </tr>
+
+                                            <tr onclick="GoDetails('cd7545cd-bcf6-414d-b4d9-b6aa6215687b');">
+                                                <td class="f-ellipsis">大客户经理</td>
+                                                <td>全部</td>
+                                                <td class="f-ellipsis">全部</td>
+                                            </tr>
+
+
+                                </tbody>
+                            </table>
+
+
+                                <div id="UpdatePanel3" style="margin: 0; vertical-align: middle;">
+
+
+                                        <input name="hidCurrentPageIndex" type="hidden" id="hidCurrentPageIndex" value="1" />
+
+                                        <input name="hidRecordCount" type="hidden" id="hidRecordCount" value="0" />
+
+		<!-- AspNetPager V7.0.2 for VS2005 & VS2008  Copyright:2003-2007 Webdiyer (www.webdiyer.com) -->
+		<!--记录总数只有一页，AspNetPager已自动隐藏，若需在只有一页数据时显示AspNetPager，请将AlwaysShow属性值设为true！-->
+		<!-- AspNetPager V7.0.2 for VS2005 & VS2008 End -->
+
+
+
+	</div>
+
+
+</div>
+                </div>
+                <div class="cb"></div>
+                <div style="display: none;">
+                    <div id="UpdatePanel2">
+
+                            <input type="submit" name="btnQuery" value="刷新" id="btnQuery" />
+
+</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-box">
+            <div class="bottom-box">
+
+                <span>杭州品茗安控信息技术股份有限公司</span>
+            </div>
+        </div>
+
+
+
+
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,133 @@
+
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><title>
+
+</title><link href="index.css" rel="stylesheet" type="text/css" />
+    <!--<link href="http://vjs.zencdn.net/5.8.8/video-js.css" rel="stylesheet" />-->
+    <!-- If you'd like to support IE8 -->
+    <!--<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>-->
+    <script src="/js/jquery-1.12.4.min.js"></script>
+    <!--<script src="http://vjs.zencdn.net/5.8.8/video.js"></script>-->
+    <!-- <script src="/js/video.js"></script>-->
+    <script src="/js/slider.js"></script>
+    <link href="/css/video-js.css" rel="stylesheet" type="text/css" />
+
+    <script src="/js/video.js"></script>
+    <script>
+
+    </script>
+    <script type="text/javascript">
+
+        $(function () {
+            videojs.options.flash.swf = "/resource/video-js.swf";
+
+            var bannerSlider = new Slider($('#banner_tabs'), {
+                time: 5000,
+                delay: 400,
+                event: 'hover',
+                auto: true,
+                mode: 'fade',
+                controller: $('#bannerCtrl'),
+                activeControllerCls: 'active'
+            });
+            $('#banner_tabs .flex-prev').click(function () {
+                bannerSlider.prev()
+            });
+            $('#banner_tabs .flex-next').click(function () {
+                bannerSlider.next()
+            });
+        });
+
+    </script>
+</head>
+<body>
+    <form method="post" action="./Index.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="U5pF8MAmC2/H2d93Twn7yve4RWbbnRn7DQYvwSIbtDxYcdqj/eAOWcX494e+cuJovW3hJJfOK6GEoNRa5BEmOK6vbLbhsDBxn9usCOAPIEiaV1Ypo8o3cw2no2JuF78N" />
+</div>
+
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="90059987" />
+</div>
+        <div class="top-bg">
+            <div class="middle-box">
+            </div>
+        </div>
+        <div class="nav-bg">
+            <div class="middle-box">
+                <img class="header-logo" src="/images/pmlogs.jpg">
+                <div class="header-campus">
+                    <p class="two">2018</p>
+                    <p class="f-fs14">品茗校园招聘</p>
+                </div>
+                <ul class="nav-top">
+                    <li><a class="active" href="/Index.aspx">首页</a></li>
+                    <li><a href="/2/2.1.aspx">校园招聘</a></li>
+                    <li><a href="/3/3.1.aspx">走进品茗</a></li>
+                    <li><a href="/4/4.1.aspx">员工分享</a></li>
+                    <li><a href="/5/5.1.aspx">乐在品茗</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div id="banner_tabs" class="flexslider">
+            <ul class="slides">
+                <li>
+                    <a title="">
+                        <img width="1920" height="580" alt="" style="background: url(/images/banner1.jpg) no-repeat center;" src="/images/alpha.png">
+                    </a>
+                </li>
+                <li>
+                    <a title="">
+                        <img width="1920" height="640" alt="" style="background: url(/images/banner2.jpg) no-repeat center;" src="/images/alpha.png">
+                    </a>
+                </li>
+            </ul>
+            <ul class="flex-direction-nav">
+                <li><a class="flex-prev" href="javascript:;">Previous</a></li>
+                <li><a class="flex-next" href="javascript:;">Next</a></li>
+            </ul>
+            <ol id="bannerCtrl" class="flex-control-nav flex-control-paging">
+                <li><a>1</a></li>
+                <li><a>2</a></li>
+            </ol>
+        </div>
+        <div class="middle-box">
+            <a href="/2/2.1.aspx" class="head">我要投递</a>
+        </div>
+        <div class="middle-box">
+            <div style="margin-top:20px;">
+                <span class="tag-cn">来杭州，不去阿里就去品茗</span>
+                <span class="tag-en">/VIDEO</span>
+            </div>
+            <div class="m-medias"  style="margin-top:10px;">
+                <div class="medias_cnt">
+                    <video id="example_video_1" class="video-js vjs-default-skin" controls preload="none" width="640" height="340"
+                        poster="/images/wrap1.jpg"
+                        data-setup="{}">
+
+                        <source src="http://hi.pinming.cn/resource/pm.mp4" type='video/mp4' />
+                        <source src="http://vjs.zencdn.net/v/oceans.webm" type='video/webm' />
+                        <source src="http://vjs.zencdn.net/v/oceans.ogv" type='video/ogg' />
+                        <track kind="captions" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                        <track kind="subtitles" src="demo.captions.vtt" srclang="en" label="English"></track><!-- Tracks need an ending tag thanks to IE9 -->
+                    </video>
+
+                </div>
+            </div>
+        </div>
+        <div class="middle-box">
+            <div class="bottom-box">
+
+                <span>杭州品茗安控信息技术股份有限公司</span>
+            </div>
+        </div>
+
+
+    </form>
+</body>
+</html>
